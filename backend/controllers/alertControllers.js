@@ -44,9 +44,9 @@ export async function insertNewAlertController(req, res) {
         })
     } catch (error) {
         console.error(error)
-        return res.status(500).json({
+        return res.status(400).json({
             "success":false,
-            "data":"internal server error"
+            "data":"bad request. There was an issue with some of the fields in the data sent."
         })
     }
 }

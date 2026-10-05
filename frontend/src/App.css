@@ -1,13 +1,13 @@
 
 
 body {
-    background: #f3f3f3;
+    background: #e0dbdb;
     text-align: center;
 }
 .App {
-    background-color: #fff;
+    background-color: #eae6e6;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(3, 3, 3, 0.2);
     padding: 10px 20px;
     transition: transform 0.2s;
     width: 500px;
@@ -32,7 +32,7 @@ input {
     /* margin-bottom: 15px; */
     padding: 8px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 1px solid #8a8383;
     border-radius: 3px;
     font-size: 12px;
 }
@@ -47,7 +47,7 @@ select {
     margin-bottom: 15px;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 1px solid #999595;
     border-radius: 5px;
 }
 
@@ -58,7 +58,7 @@ label {
     margin-top: 8px;
     margin-bottom: 5px;
     text-align: left;
-    color: #555;
+    color: #575454;
     font-weight: bold;
 }
 
@@ -67,9 +67,9 @@ button {
     border-radius: 10px;
     margin: 15px;
     border: none;
-    color: white;
+    color: rgb(229, 226, 226);
     cursor: pointer;
-    background-color: #4caf50;
+    background-color: #4bc74f;
     width: 40%;
     font-size: 16px;
 }

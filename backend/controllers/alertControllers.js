@@ -69,7 +69,7 @@ export async function deleteAlertByIdController(req, res) {
 
 export async function updateAlertByIdController(req, res) {
     try {
-        const result = await updateAlertByIdService(req.params.id, req.body)
+        await updateAlertByIdService(req.params.id, req.body)
         return res.status(200).json({
             "success":true,
             "data":`alert with id ${req.params.id} has been updated successfully`

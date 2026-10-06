@@ -1,6 +1,6 @@
 import "dotenv/config"
-import { createUserService, getAllUsersService, getCurrentUserService, loginService } from "../services/autheServices";
-import { authenticate } from "../middleware/authMiddleware";
+import { createUserService, getAllUsersService, getCurrentUserService, loginService } from "../services/autheServices.js";
+import { authenticate } from "../middleware/authMiddleware.js";
 
 export async function getAllUsersController(req, res) {
     try {

@@ -1,4 +1,4 @@
-import db from "../db";
+import db from "../db.js";
 import { ObjectId } from "mongodb";
 
 const authorization = db.collection("authorization")

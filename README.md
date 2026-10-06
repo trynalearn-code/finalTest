@@ -14,4 +14,4 @@ I ensured that invalid requests can't be sent, by only allowing certain fields i
 
 ### State
 
-Using useState on the client-end is the most efficient, as it updates in real-time and gets the results we need.
+Using useState on the client-end is the most efficient, as it updates in real-time and gets the results we need. This enabled the forms and UI to update and work well, with little to no lag.

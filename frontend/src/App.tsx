@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./Home"
 import AddAlert from "./addAlert"
 import AlertList from "./AlertList";
+import Login from "./Login";
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>
@@ -12,6 +12,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/addAlert" element={<AddAlert/>} />
+            <Route path="/login" element={<Login/>}/>
           </Routes>
 
       </BrowserRouter>
@@ -27,5 +28,7 @@ fetch('/api/alerts', {
   .then(data => {
     <AlertList/>
   });
+
+  
 
 export default App

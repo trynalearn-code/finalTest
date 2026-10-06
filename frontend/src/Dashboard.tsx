@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./dashboard.css"
 
 function Dashboard() {
@@ -14,6 +14,7 @@ function Dashboard() {
             headers: {
               'Content-Type': 'application/json',
             },
+            //probably should make a useState in the body
             body: JSON.stringify({ })
           })
 

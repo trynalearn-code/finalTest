@@ -2,33 +2,46 @@ import { Link, useNavigate } from "react-router-dom"
 import "./dashboard.css"
 
 function Dashboard() {
-    const navigate = useNavigate();
-    const clear = localStorage.clear()
+  const navigate = useNavigate();
+
   return (
     <>
-    <h1>Dashboard</h1>
-    <body>
-          <button onClick={() =>
-          navigate("/addAlert")}>Add new Alert</button>
-          <button onClick={() =>
-          navigate("/")}>Home</button>
-          <button onClick={() =>
-          navigate("/auth/register")}>Register New User</button>
-          <button onClick={() =>
-          navigate("/login")}>Logout</button>
-          {/* <button onClick= "deleteItems()" >clear</button> */}
-    </body>
+      <h1>Dashboard</h1>
+      <body>
+        <button onClick={() => {
+          fetch("localhost:3000/api/alerts", {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ })
+          })
 
-    <html>
-      <script>
+          navigate("/addAlert")
+        }}>Add new Alert</button>
+        <button onClick={() => {
+          //add the fetch here
+          navigate("/")}}>Home</button>
+        <button onClick={() =>{
+          //add the fetch here
+          navigate("/auth/register")}}>Register New User</button>
+        <button onClick={() => {
+          "deleteItems()"
+          navigate("/login")
+        }}>Logout</button>
 
-      <>
-      function deleteItems() {
-        localStorage.clear()
-      }
+      </body >
 
-      </>
-      </script>
+      <html>
+        <script>
+
+          <>
+            function deleteItems() {
+              localStorage.clear()
+            }
+
+          </>
+        </script>
       </html>
     </>
   )

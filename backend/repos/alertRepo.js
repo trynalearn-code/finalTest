@@ -9,7 +9,7 @@ export async function getAlertsRepo() {
 
 export async function getAlertByIdRepo(id) {
     return await alerts.findOne({_id:new ObjectId(id)})
-}
+}   
 
 export async function insertNewAlertRepo(data) {
     return await alerts.insertOne(data)

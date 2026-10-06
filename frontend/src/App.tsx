@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./Home"
-import AddAlert from "./addAlert"
 import AlertList from "./AlertList";
 import Login from "./Login";
 import Register from "./Register";
 import Dashboard from "./Dashboard";
+import AddAlert from "./AddAlert";
 
 function App() {
 

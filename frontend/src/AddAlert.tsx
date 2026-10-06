@@ -1,6 +1,5 @@
 import { useState } from "react"
 import "./App.css"
-import AlertList from "./AlertList"
 
 function AddAlert() {
 

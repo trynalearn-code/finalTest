@@ -4,6 +4,7 @@ import AddAlert from "./addAlert"
 import AlertList from "./AlertList";
 import Login from "./Login";
 import Register from "./Register";
+import Dashboard from "./Dashboard";
 
 function App() {
 
@@ -15,8 +16,8 @@ function App() {
             <Route path="/addAlert" element={<AddAlert/>} />
             <Route path="/login" element={<Login/>}/>
             <Route path="/auth/register" element={<Register/>}/>
+            <Route path="/auth/dashboard" element={<Dashboard/>}/>
           </Routes>
-
       </BrowserRouter>
 
     </>

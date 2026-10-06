@@ -6,7 +6,7 @@ I chose MongoDB because it creates an id for me automatically. This is helpful f
 
 ## HTTP Status codes
 
-The general HTTP status codes we used were 200 for a successful request, and a 201 for a created resource. For failures, a 500 is the internal server error. Additionally, a 404 can be used for when a resource is not found, and a 400 is when there is a bad request/client error. A 404 is unauthorized, when authentication has failed, and a 408 is a request timeout.
+The general HTTP status codes we used were 200 for a successful request, and a 201 for a created resource. For failures, a 500 is the internal server error. Additionally, a 404 can be used for when a resource is not found, and a 400 is when there is a bad request/client error. 401 is for missing/invalid information. A 404 is unauthorized, when authentication has failed, and a 408 is a request timeout.
 
 ### Validation
 

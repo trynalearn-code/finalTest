@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react"
 import "./login.css"
 
 function Login() {
-
+    // function saveLogin(){
+    //     const [save, setSave] = useState(()=>{
+    //         const storedSave = localStorage.getItem("save")
+    //         return storedSave ? parseInt(storedSave):0
+    //     })
+    //     useEffect(()=>{
+    //         localStorage.setItem("save", save.toString())
+    //     },[save])
+    //     const saves = ()=>{
+    //         setSave(save=>save)
+        // }
+    // }
     return (
         <div>
-            <body>
+           
                 
             <h1>Login</h1>
             <form>
@@ -20,7 +32,7 @@ function Login() {
 
                 <button type="submit" id="setBtn">Login</button>
             </form>
-            </body>
+          
 
 
         </div>

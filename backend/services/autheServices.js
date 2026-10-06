@@ -1,6 +1,7 @@
-import { checkUserExistsRepo, createUserRepo, getAllUsersRepo, getCurrentUserRepo, loginRepo } from "../repos/authRepo.js";
+import { checkUserExistsRepo, createUserRepo, deleteUserRepo, getAllUsersRepo, getCurrentUserRepo, loginRepo } from "../repos/authRepo.js";
 import jwt from "jsonwebtoken"
 import "dotenv/config"
+import { authenticate } from "../middleware/authMiddleware.js";
 
 export async function getAllUsersService() {
     return await getAllUsersRepo()
@@ -23,14 +24,14 @@ export async function loginService(username, password) {
 
 }
 
-export async function getCurrentUserService(username) {
-    if (!username) throw new Error("username not provided")
-    const check = checkUserExistsRepo(username)
+export async function getCurrentUserService(data) {
+    const check = checkUserExistsRepo(data)
     if (!check) throw new Error("Invalid credentials") //401
-    return await getCurrentUserRepo(username)
+    return await getCurrentUserRepo(data)
 }
 
 export async function createUserService(data) {
+    if (!getCurrentUserRepo(authenticate.role)==="admin") throw new Error ("this action is for admins only")
     if(!data.id) throw new Error("you are missing the id")
     if(!data.username) throw new Error("you are missing the username")
     if(!data.password) throw new Error("you are missing the password")
@@ -45,4 +46,9 @@ export async function createUserService(data) {
         throw new Error ("Your arena options are North, South, Center or All")
     }
     return await createUserRepo(data)
+}
+
+export async function deleteUserService(id) {
+    if (!getCurrentUserRepo(authenticate.role)==="admin") throw new Error ("this action is for admins only")
+    return await deleteUserRepo(id)
 }
